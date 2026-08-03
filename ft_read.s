@@ -1,0 +1,22 @@
+default rel
+extern __errno_location
+
+section .text
+    global ft_read
+
+ft_read:
+    mov rax, 0
+    syscall
+    cmp rax, 0
+    jge .done
+
+    neg rax
+    mov rdi, rax
+    call __errno_location wrt ..plt
+    mov [rax], edi
+    mov rax, -1
+
+.done:
+    ret
+
+section .note.GNU-stack noalloc noexec nowrite progbits

@@ -1,7 +1,7 @@
 default rel
 
 section .text
-global ft_strcpy
+    global ft_strcpy
 
 ft_strcpy:
 	mov rax, rdi
@@ -23,7 +23,7 @@ ft_strcpy:
     inc rcx
 	jmp .loop
 
-.return_null
+.return_null:
     xor rax, rax
 
 .done:

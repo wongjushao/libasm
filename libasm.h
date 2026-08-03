@@ -1,18 +1,12 @@
-/* ************************************************************************** */
-/*                  */
-/*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:     :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: bleow <bleow@student.42kl.edu.my>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/17 11:41:48 by wjun-kea          #+#  #+#             */
-/*   Updated: 2025/07/16 06:32:25 by bleow            ###########.fr       */
-/*                  */
-/* ************************************************************************** */
-
 #ifndef LIBASM_H
 # define LIBASM_H
 
 size_t ft_strlen(const char *s);
+ssize_t ft_write(int fd, const void *buf, size_t count);
+ssize_t ft_read(int fd, void *buf, size_t count);
+int ft_strcmp(const char *s1, const char *s2);
+char *ft_strcpy(char *dst, const char *src);
+char *ft_strdup(const char *s1);
+
 
 #endif
